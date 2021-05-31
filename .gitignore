@@ -1,0 +1,8 @@
+node_modules
+.idea/
+.vscode/
+test.ts
+test/reporter/*
+app/docs/*
+types/
+lib/
