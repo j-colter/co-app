@@ -1,8 +1,8 @@
 import path from 'path';
-import express, { Request, Response } from 'express';
 import http from 'http';
+import { Server } from '@colter/typescript-rest';
+import express, { Request, Response } from 'express';
 
-import { Server } from 'typescript-rest';
 import { IHttpServer, TFilter } from '..';
 import { Application } from '../application';
 import { getRoutePath, readDir } from '../utils/pathUtil';

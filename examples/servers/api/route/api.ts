@@ -1,4 +1,4 @@
-import { GET, Path, PathParam } from 'typescript-rest';
+import { GET, Path, PathParam } from '@colter/typescript-rest';
 import { Response, Tags } from '@colter/typescript-rest-swagger';
 
 @Path('/api')

@@ -1,3 +1,4 @@
+import { ServerContainer } from '@colter/typescript-rest';
 
 import { Application } from '../application';
 import { ExpressServer } from '../http/express';
@@ -11,6 +12,13 @@ export class HttpComponent implements IComponent {
   constructor(public app: Application, opts: IHttpOptions) {
     this.port = this.app.getCurServer().port;
     this.httpServer = opts.httpServer || this.getDefaultServer();
+
+    if (opts.encode) {
+      ServerContainer.get().encode = opts.encode;
+    }
+    if (opts.decode) {
+      ServerContainer.get().decode = opts.decode;
+    }
 
     if (opts.filters) {
       opts.filters.map(b => this.httpServer.addFilter(b));

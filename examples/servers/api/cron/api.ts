@@ -1,4 +1,4 @@
-import { Application } from '../../../../src/application';
+import { Application } from '../../../../src';
 
 export default class {
   constructor(public app: Application) {

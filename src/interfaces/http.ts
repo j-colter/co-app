@@ -4,6 +4,8 @@ export type TFilter = Function;
 export interface IHttpOptions {
   filters?: TFilter[];
   httpServer?: IHttpServer;
+  decode?: any;
+  encode?: (data: any) => any;
 }
 
 export interface IHttpServer {
